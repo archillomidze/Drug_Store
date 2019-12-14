@@ -1,0 +1,50 @@
+1.  წამლები  
+ID
+NAME
+foreign key qalaqi (mwarmoebeli)
+foreign key warmoebeli
+foreign key aghwerilobis_danishnuleba
+foreign key aghweriloba
+ename erteuloba(malamo, tableti, sitxe)
+int raodenoba
+double dozireba
+moqmedebis_vada
+
+
+2.  country 
+ID
+NAME 
+alfa code
+
+3. qalaqi
+ID 
+Name
+foreign key qveyana
+boolean is_capital
+
+4. mwarmoebeli
+ID 
+NAME
+licenziis kodi
+foreign key qalaqi
+misamarti
+mail
+aghweriloba 
+daarsebi_tarighi
+daxurvis_tarighi
+foreign key dedakompania(mwarmoebeli ID)
+
+5. tarighi 
+foreign key wamlebis_ID
+seriis_nomeri
+damzadebis_tarighi 
+vadis_gasvlis_tarighi 
+shemotanis_tarighi
+gayidvis_tarighi timestamp
+foreign key pasi
+
+6. pasebi
+wamlis_ID
+double pasi
+tarighi
+
