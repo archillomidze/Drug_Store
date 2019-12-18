@@ -32,8 +32,8 @@ create table users(
 	user_first_name varchar(50) not null, 
 	user_last_name varchar(50) not null, 
 	user_birth_date date , 
-	user_address varchar(5	0) ,
-	user_telephone varchar	(25) not null, 
+	user_address varchar(50) ,
+	user_telephone varchar(25) not null, 
 	user_registration_date 	timestamp
   )engine=	innodb
 
