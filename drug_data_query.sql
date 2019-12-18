@@ -49,8 +49,8 @@ create table city (
 
 create table country (
 	country_id int primary key not null,
-	country_name varchar(50) not null,
-	country_alpha_code varchar(3) not null
+	country_name varchar(50) unique not null,
+	country_alpha_code varchar(3) unique not null
 	)engine=innodb;
 
 
