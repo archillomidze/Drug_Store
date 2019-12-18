@@ -31,7 +31,7 @@ create table users(
     user_personal_id int not null unique,
 	user_first_name varchar(50) not null, 
 	user_last_name varchar(50) not null, 
-	user_birthdate date , 
+	user_birth_date date , 
 	user_address varchar(5	0) ,
 	user_telephone varchar	(25) not null, 
 	user_registration_date 	timestamp
@@ -76,7 +76,7 @@ create table drug(
 		manufacturer_id int , 
 		constraint foreign key (manufacturer_id) 
 			references manufacturer(manufacturer_id), 
-			manucatrurer_description text , 
+			manufacturer_description text , 
 			drug_type enum ('ointment','tablet', 'liquid'),  
 			drug_quantity int not null,
 			drug_unit enum('pieces', 'grams') ,  
