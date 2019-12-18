@@ -47,6 +47,11 @@ create table city (
 		is_capital boolean 
 	)engine=innodb;
 
+create table country (
+	country_id int primary key not null,
+	country_name varchar(50) not null,
+	country_alpha_code varchar(3) not null
+	)engine=innodb;
 
 
 create table manufacturer (
