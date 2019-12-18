@@ -101,6 +101,7 @@ create table price (
 	drug_id int, 
 	constraint foreign key (drug_id)
 		references drug(drug_id), 
-		drug_price decimal(12,4) not null,
-		price_date timestamp 
+	drug_price decimal(12,4) primary key not null,
+	price_date timestamp 
 	)engine=innodb;
+#ALTER TABLE `drug_sales` ADD INDEX(`drug_price`)
