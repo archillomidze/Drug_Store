@@ -35,7 +35,7 @@ create table users(
 	user_address varchar(50) ,
 	user_telephone varchar(25) not null, 
 	user_registration_date 	timestamp
-  )engine=	innodb
+)engine=innodb;
 
 
 create table city (
@@ -51,7 +51,7 @@ create table country (
 	country_id int primary key not null,
 	country_name varchar(50) unique not null,
 	country_alpha_code varchar(3) unique not null
-	)engine=innodb;
+)engine=innodb;
 
 
 create table manufacturer (
@@ -69,7 +69,7 @@ create table manufacturer (
 	mother_company int , 
 	constraint foreign key(mother_company) 
 		references manufacturer(manufacturer_id) 
-	) engine=innodb;
+)engine=innodb;
 
 
 create table drug(
@@ -78,16 +78,16 @@ create table drug(
 	city_id int, 
 	constraint foreign key (city_id) 
 		references city(city_id), 
-		manufacturer_id int , 
-		constraint foreign key (manufacturer_id) 
-			references manufacturer(manufacturer_id), 
-			manufacturer_description text , 
-			drug_type enum ('ointment','tablet', 'liquid'),  
-			drug_quantity int not null,
-			drug_unit enum('pieces', 'grams') ,  
-			drug_dosage_unit int , 
-			drug_dosage enum ('grams', 'milligrams') 
-	)engine=innodb;
+	manufacturer_id int , 		
+	constraint foreign key (manufacturer_id) 
+		references manufacturer(manufacturer_id), 
+	manufacturer_description text , 
+	drug_type enum ('ointment','tablet', 'liquid'),  		
+	drug_quantity int not null,
+	drug_unit enum('pieces', 'grams') ,  
+	drug_dosage_unit int , 
+	drug_dosage enum ('grams', 'milligrams') 
+)engine=innodb;
 
 #version 1
 create table price (
@@ -108,5 +108,5 @@ create table price (
 		references drug(drug_id), 
 	drug_price decimal(12,4) primary key not null,
 	price_date timestamp 
-	)engine=innodb;
+)engine=innodb;
 #ALTER TABLE `drug_sales` ADD INDEX(`drug_price`)
