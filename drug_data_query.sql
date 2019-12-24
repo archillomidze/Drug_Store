@@ -95,8 +95,8 @@ create table price (
 	drug_id int, 
 	constraint foreign key (drug_id)
 		references drug(drug_id), 
-		drug_price double not null,
-		price_date timestamp 
+	drug_price decimal(12, 4) not null,
+	price_date timestamp 
 	)engine=innodb;
 
 
