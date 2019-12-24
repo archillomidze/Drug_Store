@@ -17,8 +17,9 @@ create table  drug_sales (
 		references drug_series(drug_series_id),
 	drug_quantity int not null,
 	drug_sale_date timestamp,
-	drug_price decimal(12,4) ,
-	constraint foreign key (drug_price)
+	drug_price decimal(12,4),
+	index(drug_price),
+	foreign key (drug_price)
 		references price(drug_price),
 	sale_user int ,
 	constraint foreign key (sale_user)
