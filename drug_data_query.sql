@@ -27,8 +27,8 @@ create table  drug_sales (
 
 
 create table users(
-    user_id int primary key, 
-    user_personal_id int not null unique,
+    	user_id int primary key, 
+    	user_personal_id int not null unique,
 	user_first_name varchar(50) not null, 
 	user_last_name varchar(50) not null, 
 	user_birth_date date , 
