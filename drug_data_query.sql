@@ -15,7 +15,7 @@ create table  drug_sales (
 	drug_series_id int ,
 	constraint foreign key (drug_series_id)
 		references drug_series(drug_series_id),
-	drug_quantity int not null,
+	drug_sale_quantity int not null,
 	drug_sale_date timestamp,
 	drug_price decimal(12,4),
 	index(drug_price),
@@ -104,10 +104,12 @@ create table price (
 #version 2
 create table price (
 	drug_price_id int primary key , 
-	drug_id int, 
-	constraint foreign key (drug_id)
-		references drug(drug_id), 
-	drug_price decimal(12,4) primary key not null,
+	drug_id int ,
+	constraint foreign key (drug_id) 
+		references drug(drug_id) , 
+	drug_price decimal(12,4) not null,
 	price_date timestamp 
 )engine=innodb;
+
 #ALTER TABLE `drug_sales` ADD INDEX(`drug_price`)
+# ALTER TABLE `users` CHANGE `user_id` `user_id` INT(11) NOT NULL AUTO_INCREMENT;
