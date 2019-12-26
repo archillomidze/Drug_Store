@@ -45,7 +45,7 @@ create table city (
 	country_id int ,
 	constraint foreign key(country_id) 
 		references country(country_id), 
-		is_capital boolean 
+	is_capital boolean 
 	)engine=innodb;
 
 create table country (
@@ -98,7 +98,7 @@ create table price (
 		references drug(drug_id), 
 	drug_price decimal(12, 4) not null,
 	price_date timestamp 
-	)engine=innodb;
+)engine=innodb;
 
 
 #version 2
