@@ -13,9 +13,6 @@ create table drug_series(
 #drug_price double ver moaqvs
 create table  drug_sales (
 	drug_sales_id int,
-	drug_id int,
-	constraint foreign key (drug_id)
-		references drug_id(drug_id),
 	drug_series_id int ,
 	constraint foreign key (drug_series_id)
 		references drug_series(drug_series_id),
