@@ -64,7 +64,7 @@ create table manufacturer (
 	constraint foreign key (city_id) 
 		references city(city_id), 
 	manufacturer_address varchar(50) not null,
-	manufacturer_description text, 
+	manufacturer_annotation text, 
 	manufacturer_email varchar(50) unique,
 	manufacturer_establish_date date not null , 
 	manufacturer_closure_date date, 
