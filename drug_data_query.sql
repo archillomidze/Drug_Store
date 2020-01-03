@@ -10,7 +10,7 @@ create table drug_series(
 	drug_buy_quantity int not null
 )engine=innodb;
 
-#drug_price double ver moaqvs
+/* old 
 create table  drug_sales (
 	drug_sales_id int primary key,
 	drug_series_id int ,
@@ -22,6 +22,21 @@ create table  drug_sales (
 	index(drug_price),
 	foreign key (drug_price)
 		references price(drug_price),
+	sale_user int ,
+	constraint foreign key (sale_user)
+		references users(user_id)
+)engine=innodb;*/
+
+
+#new one
+create table  drug_sales (
+	drug_sales_id int primary key,
+	drug_series_id int ,
+	constraint foreign key (drug_series_id)
+		references drug_series(drug_series_id),
+	drug_sale_quantity int not null,
+	drug_sale_date timestamp,
+	drug_price decimal(12,4),
 	sale_user int ,
 	constraint foreign key (sale_user)
 		references users(user_id)
