@@ -12,7 +12,7 @@ create table drug_series(
 
 #drug_price double ver moaqvs
 create table  drug_sales (
-	drug_sales_id int,
+	drug_sales_id int primary key,
 	drug_series_id int ,
 	constraint foreign key (drug_series_id)
 		references drug_series(drug_series_id),
@@ -112,5 +112,9 @@ create table price (
 	price_date timestamp 
 )engine=innodb;
 
-#ALTER TABLE `drug_sales` ADD INDEX(`drug_price`)
+# ALTER TABLE `drug_sales` ADD INDEX(`drug_price`)
 # ALTER TABLE `users` CHANGE `user_id` `user_id` INT(11) NOT NULL AUTO_INCREMENT;
+# edit :: 29.12.2018 
+# ALTER TABLE `users` CHANGE `user_personal_id` `user_personal_id` INT(11) NOT NULL AUTO_INCREMENT;
+# SET @@auto_increment_increment=1028560; 
+# ALTER TABLE users AUTO_INCREMENT = 100000001;
