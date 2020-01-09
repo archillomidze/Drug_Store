@@ -173,6 +173,7 @@ CREATE TABLE `drug_sales` (
 -- Dumping data for table `drug_sales`
 --
 
+
 INSERT INTO `drug_sales` (`drug_sales_id`, `drug_series_id`, `drug_sale_quantity`, `drug_sale_date`, `drug_price`, `sale_user`) VALUES
 (1, 4, 23, '2020-01-08 04:32:00', '15.7000', 4),
 (2, 1, 30, '2004-07-12 02:45:00', '12.8900', 3),
